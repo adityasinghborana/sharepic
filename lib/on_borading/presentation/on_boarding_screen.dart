@@ -38,6 +38,15 @@ class OnBoardingScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Kwikpic'),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      ElevatedButton(onPressed: () {}, child: Text('Skip')),
+                    ],
+                  )
                 ],
               ),
             ],
