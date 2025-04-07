@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sharepic/core/utilities/constants.dart';
+import 'package:sharepic/core/utilities/utilities.dart';
 
 class OnBoardingScreen extends StatelessWidget {
   //var column;
@@ -37,7 +38,10 @@ class OnBoardingScreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text('Kwikpic'),
+                  Text(
+                    'Kwikpic',
+                    style: AppTextStyles.dmSansRegular.withSize(textL),
+                  ),
                   SizedBox(
                     width: 10,
                   ),
