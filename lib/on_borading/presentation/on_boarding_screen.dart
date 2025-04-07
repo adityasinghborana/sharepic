@@ -21,18 +21,26 @@ class OnBoardingScreen extends StatelessWidget {
               color: Color(0xff347AF6).withValues(alpha: 0.2),
             ),
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('Kwikpic'),
-            ],
-          ),
           Container(
             width: Get.width * 0.7,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: primaryBackgroundColor.withValues(alpha: 0.8),
+              color: Color(0xff347AF6).withValues(alpha: 0.3),
             ),
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 200,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text('Kwikpic'),
+                ],
+              ),
+            ],
           ),
         ],
       ),
