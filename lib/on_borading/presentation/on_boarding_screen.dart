@@ -1,60 +1,56 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:sharepic/core/utilities/constants.dart';
-import 'package:sharepic/core/utilities/utilities.dart';
+import 'package:sharepic/global_widgets/buttons.dart';
 
 class OnBoardingScreen extends StatelessWidget {
-  //var column;
-
   const OnBoardingScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: primaryBackgroundColor,
-      body: Stack(
-        alignment: Alignment.center,
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          Container(
-            width: Get.width,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Color(0xff347AF6).withValues(alpha: 0.2),
-            ),
-          ),
-          Container(
-            width: Get.width * 0.7,
-            decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              color: Color(0xff347AF6).withValues(alpha: 0.3),
-            ),
-          ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
+          Text("KwikPic"),
+          Stack(
+            alignment: Alignment.center,
             children: [
-              SizedBox(
-                height: 200,
+              Container(
+                width: Get.width,
+                height: Get.height * 0.3,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: primaryColour.withValues(alpha: 0.1),
+                ),
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Kwikpic',
-                    style: AppTextStyles.dmSansRegular.withSize(textL),
-                  ),
-                  SizedBox(
-                    width: 10,
-                  ),
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.stretch,
-                    children: [
-                      ElevatedButton(onPressed: () {}, child: Text('Skip')),
-                    ],
-                  )
-                ],
+              Container(
+                height: Get.width,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: Color(0xff347AF6).withValues(alpha: 0.1),
+                ),
+              ),
+              Container(
+                width: Get.width,
+                height: Get.height * 0.2,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: primaryColour.withValues(alpha: 0.1),
+                ),
               ),
             ],
           ),
+          Text("This is the hEading "),
+          Text("This is the SubhEading "),
+          SizedBox(
+            height: 50,
+          ),
+          CommonButton(
+              type: ButtonType.filled, label: "Next", onPressed: () {}),
+          CommonButton(
+              type: ButtonType.outline, label: "Play", onPressed: () {}),
         ],
       ),
     );
